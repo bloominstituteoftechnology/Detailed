@@ -33,6 +33,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="talkingCharacterImageView" destination="oVi-cK-cE4" id="3VX-7f-zpv"/>
                                     <segue destination="D8o-Ep-Aor" kind="show" id="E7I-te-mu6"/>
                                 </connections>
                             </tableViewCell>
@@ -95,6 +96,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RX9-YN-61N"/>
                     </view>
+                    <connections>
+                        <outlet property="talkingCharacterImageView" destination="naM-aM-hG6" id="oEc-uk-Xr5"/>
+                        <outlet property="talkingCharacterLabel" destination="ygW-VL-lkn" id="MNw-OL-L7x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVT-QL-0te" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
