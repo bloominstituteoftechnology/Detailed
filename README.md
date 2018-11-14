@@ -25,10 +25,15 @@ Your completed application will look like the following video:
 Demonstrate your understanding of today's concepts by answering the following free-form questions. Submit them as a text file along with your project.
 
 * What is a detail view controller?
+Answer: It is a view controller that lets us see details of a cell or view from a table view controller or other controller. 
 * What does a segue do? How do you use it and where?
+Answer: It is used to pass data to our detail view controller in MVC design pattern and navigate between views. 
 * What are other ways your detail view controller could get its information? Why use segues?
+Answer: segues allows us to keep the model and all our view controllers separate only relying on the view controller from whence it gets its data. 
 * Why must you conditionally cast custom cell types when using them with table views? How do you do this?
-* Why must you conditionally cast detail view controller types when using them with segues? How do you do this?
+Answer: as? tableViewCellNameHere - It is needed because otherwise it will only return a default table view cell which will not give us access to the outlets and actions we need or let us pass data to it. 
+* Why must you conditionally cast detail view controller types when using them with segues? How do you do this? as? viewControllerNameHere - Similar purpose it will not give us access to the outlets and actions we need or let us pass data to it. 
+Answer: 
 
 ## Project Setup
 
