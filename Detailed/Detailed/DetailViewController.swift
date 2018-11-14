@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
         let cells = Model.shared.cells(for: character)
         imageView.animationImages = cells
         imageView.animationRepeatCount = 0
-        imageView.animationDuration = 62
+        imageView.animationDuration = 60
         imageView.startAnimating()
     }
     

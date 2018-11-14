@@ -14,26 +14,22 @@ class TableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return Model.shared.characters.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PersonCell.reuseIdentifier, for: indexPath) as? PersonCell // conditional cast
+        let reuseIdentifier = "entryCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? TableViewCell// conditional cast
             else {fatalError("unable to dequeEntryCell")}
         
-        let person = Model.shared.person(forIndex: indexPath.row)
-        cell.nameLabel.text = person.name
-        cell.cohortLabel.text = person.cohort
-        
-            
-            
-            
+        let character = Model.shared.characters[indexPath.row]
+        cell.imageViewInCell?.image = Model.shared.image(for: character)
+    
         return cell
         
     }
@@ -43,9 +39,9 @@ class TableViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else {return}
         guard let destination = segue.destination as? DetailViewController else {return} // could put fatal errors
         
-        let person = Model.character(forIndex: indexPath.row)
+        let character = Model.shared.characters[indexPath.row]
         
-        destination.person = person
+        destination.character = character
     }
     
 }
