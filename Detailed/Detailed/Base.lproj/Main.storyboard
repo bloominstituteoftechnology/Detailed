@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="7mo-eq-i0s">
             <objects>
                 <tableViewController id="PDf-Dp-zZm" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                             <outlet property="delegate" destination="PDf-Dp-zZm" id="xOS-wz-OCa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="UGe-IW-Ua7"/>
+                    <navigationItem key="navigationItem" id="UGe-IW-Ua7"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mW-4A-ERj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
