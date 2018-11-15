@@ -6,7 +6,9 @@ class TableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //print(Model.shared.characters)
         return Model.shared.characters.count
+        
     }
     
     

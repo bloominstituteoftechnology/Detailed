@@ -25,6 +25,9 @@ class Model {
     
     private let cellCounts = [Animation.bureaucrat: 26, .frog: 62, .ranger: 86, .vendor: 36, .bot: 69]
     
+    func frames (character: Animation) -> Double {
+        return (Double(Model.shared.cellCounts[character]! / 15))
+    }
     var characters: [Animation] {
         return Animation.allCases
     }

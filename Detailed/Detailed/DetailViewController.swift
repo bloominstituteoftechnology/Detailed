@@ -3,7 +3,7 @@ import UIKit
 
 
 class DetailViewController: UIViewController {
-    var character: Model.Animation? //= Model.Animation.bureaucrat
+    var character: Model.Animation?
     
     @IBOutlet weak var detailBeastNameLabel: UILabel!
     @IBOutlet weak var detailBeastImageView: UIImageView!
@@ -13,13 +13,14 @@ class DetailViewController: UIViewController {
         
         
         guard let character = character else {fatalError("valid character not found")}
-        detailBeastNameLabel.text = character.rawValue  // fix this later!!!
+        detailBeastNameLabel.text = character.rawValue
         
         let cells = Model.shared.cells(for: character)
+        let animationDur: Double = Model.shared.frames(character: character) 
         
         detailBeastImageView.animationImages = cells
         detailBeastImageView.animationRepeatCount = 0
-        detailBeastImageView.animationDuration = 1.0 // Fix to compute proper time depending on number of frames. 
+        detailBeastImageView.animationDuration = animationDur
         detailBeastImageView.startAnimating()
     }
 }
