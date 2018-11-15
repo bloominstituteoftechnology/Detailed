@@ -37,6 +37,7 @@ class Model {
         return Animation.allCases
     }
     
+    
     func image(for character: Animation) -> UIImage {
         // RETURN THE 000 IMAGE FOR THE GIVEN CHARACTER HERE
         let characterName = character.rawValue
@@ -51,7 +52,7 @@ class Model {
         var imageArray: [UIImage] = []
         let cellCount = ["bureaucrat": 26, "frog": 62, "ranger": 86, "vendor": 36, "bot": 69]
         
-        guard let count = cellCount[characterName] else {fatalError("no such (characterName)")}
+        guard let count = cellCount[characterName] else {fatalError("no such character (characterName)")}
         
         for num in 0..<count {
             let paddedNum = String(num).leftPadding(toLength: 3, withPad: "0")
@@ -62,3 +63,4 @@ class Model {
         return imageArray
     }
 }
+
