@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		119EF63F219CC710005DB0C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119EF63E219CC710005DB0C1 /* AppDelegate.swift */; };
-		119EF641219CC710005DB0C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119EF640219CC710005DB0C1 /* ViewController.swift */; };
 		119EF644219CC710005DB0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119EF642219CC710005DB0C1 /* Main.storyboard */; };
 		119EF646219CC711005DB0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119EF645219CC711005DB0C1 /* Assets.xcassets */; };
 		119EF649219CC711005DB0C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119EF647219CC711005DB0C1 /* LaunchScreen.storyboard */; };
+		119EF652219CCAC2005DB0C1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119EF651219CCAC2005DB0C1 /* TableViewController.swift */; };
+		119EF654219CCAEE005DB0C1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119EF653219CCAEE005DB0C1 /* TableViewCell.swift */; };
+		119EF656219CCB16005DB0C1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119EF655219CCB16005DB0C1 /* DetailViewController.swift */; };
+		119EF658219CCB36005DB0C1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119EF657219CCB36005DB0C1 /* Model.swift */; };
+		119EF65A219CCD79005DB0C1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EF659219CCD79005DB0C1 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		119EF63B219CC710005DB0C1 /* Detailed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Detailed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119EF63E219CC710005DB0C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		119EF640219CC710005DB0C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		119EF643219CC710005DB0C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		119EF645219CC711005DB0C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		119EF648219CC711005DB0C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		119EF64A219CC711005DB0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		119EF651219CCAC2005DB0C1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		119EF653219CCAEE005DB0C1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		119EF655219CCB16005DB0C1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		119EF657219CCB36005DB0C1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		119EF659219CCD79005DB0C1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +46,7 @@
 		119EF632219CC70F005DB0C1 = {
 			isa = PBXGroup;
 			children = (
+				119EF659219CCD79005DB0C1 /* Default-568h@2x.png */,
 				119EF63D219CC710005DB0C1 /* Detailed */,
 				119EF63C219CC710005DB0C1 /* Products */,
 			);
@@ -54,14 +63,41 @@
 		119EF63D219CC710005DB0C1 /* Detailed */ = {
 			isa = PBXGroup;
 			children = (
-				119EF63E219CC710005DB0C1 /* AppDelegate.swift */,
-				119EF640219CC710005DB0C1 /* ViewController.swift */,
+				119EF65B219CCD82005DB0C1 /* Model */,
 				119EF642219CC710005DB0C1 /* Main.storyboard */,
+				119EF65C219CCD8E005DB0C1 /* View Controllers */,
+				119EF650219CCA92005DB0C1 /* Resources */,
+			);
+			path = Detailed;
+			sourceTree = "<group>";
+		};
+		119EF650219CCA92005DB0C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				119EF63E219CC710005DB0C1 /* AppDelegate.swift */,
 				119EF645219CC711005DB0C1 /* Assets.xcassets */,
 				119EF647219CC711005DB0C1 /* LaunchScreen.storyboard */,
 				119EF64A219CC711005DB0C1 /* Info.plist */,
 			);
-			path = Detailed;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		119EF65B219CCD82005DB0C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				119EF657219CCB36005DB0C1 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		119EF65C219CCD8E005DB0C1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				119EF651219CCAC2005DB0C1 /* TableViewController.swift */,
+				119EF653219CCAEE005DB0C1 /* TableViewCell.swift */,
+				119EF655219CCB16005DB0C1 /* DetailViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				119EF649219CC711005DB0C1 /* LaunchScreen.storyboard in Resources */,
+				119EF65A219CCD79005DB0C1 /* Default-568h@2x.png in Resources */,
 				119EF646219CC711005DB0C1 /* Assets.xcassets in Resources */,
 				119EF644219CC710005DB0C1 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119EF641219CC710005DB0C1 /* ViewController.swift in Sources */,
+				119EF658219CCB36005DB0C1 /* Model.swift in Sources */,
+				119EF654219CCAEE005DB0C1 /* TableViewCell.swift in Sources */,
 				119EF63F219CC710005DB0C1 /* AppDelegate.swift in Sources */,
+				119EF652219CCAC2005DB0C1 /* TableViewController.swift in Sources */,
+				119EF656219CCB16005DB0C1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Detailed/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Detailed/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Detailed/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Detailed/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
