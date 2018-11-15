@@ -26,16 +26,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="05P-l5-tP8">
-                                            <rect key="frame" x="137.5" y="10" width="100" height="100"/>
+                                            <rect key="frame" x="137.5" y="11" width="100" height="97.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="rxM-9F-NGk"/>
-                                                <constraint firstAttribute="width" constant="100" id="uJr-kO-7Ip"/>
+                                                <constraint firstAttribute="width" constant="100" id="ZT5-gi-n5a"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="05P-l5-tP8" firstAttribute="centerX" secondItem="37e-JJ-8s5" secondAttribute="centerX" id="1CI-Zf-J56"/>
-                                        <constraint firstItem="05P-l5-tP8" firstAttribute="centerY" secondItem="37e-JJ-8s5" secondAttribute="centerY" id="kry-mw-brJ"/>
+                                        <constraint firstItem="05P-l5-tP8" firstAttribute="centerX" secondItem="37e-JJ-8s5" secondAttribute="centerX" id="5Q7-i9-jIN"/>
+                                        <constraint firstItem="05P-l5-tP8" firstAttribute="centerY" secondItem="37e-JJ-8s5" secondAttribute="centerY" id="RHx-5u-tgx"/>
+                                        <constraint firstItem="05P-l5-tP8" firstAttribute="top" secondItem="37e-JJ-8s5" secondAttribute="topMargin" id="nkU-sl-T07"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -63,40 +63,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q9n-BP-XTg">
-                                <rect key="frame" x="67" y="184" width="241" height="299"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dko-IM-ywQ">
-                                <rect key="frame" x="67" y="491" width="241" height="67"/>
+                                <rect key="frame" x="152" y="522" width="71" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zxp-gt-GrC">
-                                <rect key="frame" x="127" y="102" width="121" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title=""/>
-                                </segments>
-                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q9n-BP-XTg">
+                                <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="6PJ-zO-oYZ"/>
+                                    <constraint firstAttribute="height" constant="150" id="JRU-xy-fCl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Q9n-BP-XTg" firstAttribute="top" secondItem="yzd-NY-BWq" secondAttribute="top" constant="120" id="4id-06-NGg"/>
-                            <constraint firstItem="Q9n-BP-XTg" firstAttribute="centerY" secondItem="sTU-Ci-0hE" secondAttribute="centerY" id="8uL-l2-lsw"/>
-                            <constraint firstItem="dko-IM-ywQ" firstAttribute="trailing" secondItem="Q9n-BP-XTg" secondAttribute="trailing" id="PE3-sw-sX8"/>
-                            <constraint firstItem="Q9n-BP-XTg" firstAttribute="leading" secondItem="yzd-NY-BWq" secondAttribute="leading" constant="67" id="Ryj-vr-5xn"/>
-                            <constraint firstItem="dko-IM-ywQ" firstAttribute="top" secondItem="Q9n-BP-XTg" secondAttribute="bottom" constant="8" id="eXI-fs-3ft"/>
+                            <constraint firstItem="dko-IM-ywQ" firstAttribute="centerX" secondItem="sTU-Ci-0hE" secondAttribute="centerX" id="6iP-7f-Hc2"/>
+                            <constraint firstItem="Q9n-BP-XTg" firstAttribute="centerX" secondItem="sTU-Ci-0hE" secondAttribute="centerX" id="L4a-IY-wOJ"/>
+                            <constraint firstItem="Q9n-BP-XTg" firstAttribute="centerY" secondItem="sTU-Ci-0hE" secondAttribute="centerY" id="Vgm-nb-CyG"/>
                             <constraint firstItem="yzd-NY-BWq" firstAttribute="bottom" secondItem="dko-IM-ywQ" secondAttribute="bottom" constant="109" id="onf-oi-OTV"/>
-                            <constraint firstItem="Q9n-BP-XTg" firstAttribute="centerX" secondItem="sTU-Ci-0hE" secondAttribute="centerX" id="qut-LK-Beo"/>
-                            <constraint firstItem="dko-IM-ywQ" firstAttribute="leading" secondItem="Q9n-BP-XTg" secondAttribute="leading" id="rqB-TJ-ZvE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yzd-NY-BWq"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="Q9n-BP-XTg" id="an9-17-qJi"/>
+                        <outlet property="detailImageView" destination="Q9n-BP-XTg" id="rRR-Mo-Jl1"/>
                         <outlet property="label" destination="dko-IM-ywQ" id="iNu-8j-bmd"/>
                     </connections>
                 </viewController>

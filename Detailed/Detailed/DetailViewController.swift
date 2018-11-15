@@ -2,7 +2,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var detailImageView: UIImageView!
     
     @IBOutlet weak var label: UILabel!
     
@@ -18,10 +18,11 @@ class DetailViewController: UIViewController {
         label.text = character.rawValue
         
         
-        imageView.animationImages = cells
-        imageView.animationRepeatCount = 0
-        imageView.animationDuration = TimeInterval(0.0/2)
-        imageView.startAnimating()
+        detailImageView.animationImages = cells
+        detailImageView.animationRepeatCount = 0
+        //The base framerate is 0.0, which is 30 frames per second. Divide that by 2 and you have 15 frames per second.
+        detailImageView.animationDuration = TimeInterval(0.0/2)
+        detailImageView.startAnimating()
     }
     
     

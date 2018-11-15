@@ -27,4 +27,7 @@ class TableViewController : UITableViewController {
         guard let destination = segue.destination as? DetailViewController else { return }
         destination.character = Model.Animation.allCases[indexPath.row]
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 }
