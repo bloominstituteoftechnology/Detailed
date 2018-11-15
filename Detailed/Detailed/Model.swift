@@ -7,7 +7,6 @@ extension Int {
         return string
     }
 }
-
 class Model {
     static let shared = Model()
     private init() {}
@@ -39,26 +38,12 @@ class Model {
     
     func cells(for character: Animation) -> [UIImage] {
         
-        var imageArray : [UIImage] = []
+        let count = cellCounts[character]
         
-        for count in 0...25 {
-            if count < 10 {
-                let imageName = "\(character)00\(count)"
-                guard let image = UIImage(named: imageName) else {fatalError("Oops1.(Model.cells)")}
-                imageArray.append(image)
-            }
-            else {
-                let imageName = "\(character)0\(count)"
-                guard let image = UIImage(named: imageName) else {fatalError("Oops2.(Model.cells)")}
-                imageArray.append(image)
-            }
-        }
-        return imageArray
     }
     func getCharacter () -> Model.Animation{
         let character = Model.shared.characters[Model.shared.index]
         return character
-        
     }
     
 }
