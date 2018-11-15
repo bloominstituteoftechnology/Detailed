@@ -28,14 +28,29 @@ class Model {
     
     func image(for character: Animation) -> UIImage {
         // RETURN THE 000 IMAGE FOR THE GIVEN CHARACTER HERE
+        
         //The name of each animation cell is the animation case (like frog)'s rawValue property followed by a three digit number, starting with 000
         //bureaucrat 0-25, frog 0-61 ranger 0-85, vendor 0-35, bot 0-68
-        for bureaucrat in Talking Bureaucrat000 ... Talking Bureaucrat025{
-            return bureaucrat
+        let characterName: String = "\(character.rawValue)000"
+        return UIImage(named: characterName) ?? UIImage()
+
     }
     
     func cells(for character: Animation) -> [UIImage] {
-        // RETURN AN ARRAY OF IMAGES FOR THE GIVEN CHARACTER HERE
-        return [characters: UIImage]
+        // RETURN AN ARRAY OF IMAGES FOR THE GIVEN CHARACTER HER
+        var imageArray: [UIImage] = []
+        
+        guard let charIndex = cellCounts.index(forKey: character) else { return [] }
+        let maxFrameInt = cellCounts.values[charIndex]
+        
+        for i in 1..<maxFrameInt {
+            let charName = character.rawValue
+            let paddedInt = i.stringPadded(to: 3)
+            let imageName = charName + paddedInt
+            let image = UIImage(named: imageName) ?? UIImage()
+            imageArray.append(image)
+        }
+        
+        return imageArray
     }
 }
