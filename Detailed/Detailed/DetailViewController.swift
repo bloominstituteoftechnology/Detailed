@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
         
         imageView.animationImages = cells
         imageView.animationRepeatCount = 0
-        imageView.animationDuration =
+        imageView.animationDuration = 3
         imageView.startAnimating()
     }
     

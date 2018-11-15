@@ -27,19 +27,27 @@ class Model {
         return Animation.allCases
     }
     
+    
     func count() -> Int{
         return characters.count
     }
     func image(for character: Animation) -> UIImage {
         let imageName = "\(character)000"
+        print(imageName)
         guard let image = UIImage(named: imageName) else {fatalError("Image did not load.(Model.image)")}
         return image
     }
     
     func cells(for character: Animation) -> [UIImage] {
+        var imageArray : [UIImage] = []
+        guard let count = cellCounts[character] else {fatalError("Error message of doom: Model.cells")}
+        for num in (0...count) {
+            let imageName = "\(character)\(num.stringPadded(to: 3))"
+            imageArray.append(UIImage(named: imageName)!)
+            
+        }
         
-        let count = cellCounts[character]
-        
+        return imageArray
     }
     func getCharacter () -> Model.Animation{
         let character = Model.shared.characters[Model.shared.index]

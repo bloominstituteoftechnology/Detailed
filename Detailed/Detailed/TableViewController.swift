@@ -1,7 +1,10 @@
 import UIKit
 
 class TableViewController : UITableViewController {
- 
+    
+    
+    
+    
     let reuseIdentifier = "cell"
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -14,6 +17,7 @@ class TableViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        cell.imageView?.image = Model.shared.image(for: Model.Animation.allCases[indexPath.row])
         return cell
         
     }
