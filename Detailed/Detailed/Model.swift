@@ -37,7 +37,7 @@ class Model {
     
     func image(for character: Animation) -> UIImage {
         // RETURN THE 000 IMAGE FOR THE GIVEN CHARACTER HERE
-        //let characterName = character.rawValue
+        
         let imageName = "\(character.rawValue)000"
         guard let validImage = UIImage(named: imageName) else {fatalError("no such image")}
         return validImage
@@ -46,11 +46,11 @@ class Model {
     func cells(for character: Animation) -> [UIImage] {
         // RETURN AN ARRAY OF IMAGES FOR THE GIVEN CHARACTER HERE
         let characterName = character
-        print(characterName)
+        
         var imageArray: [UIImage] = []
        
         guard let count = cellCounts[characterName] else {fatalError("no such character (characterName)")}
-        print(count)
+       
         
         for num in 0..<count {
             let paddedNum = num.stringPadded(to: 3)
@@ -59,7 +59,7 @@ class Model {
             guard let validImage = UIImage(named: imageName) else {fatalError("no such image")}
             imageArray.append(validImage)
         }
-        print(imageArray)
+        
         return imageArray
     }
 }
