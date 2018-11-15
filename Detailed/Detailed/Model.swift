@@ -31,7 +31,7 @@ class Model {
     func count() -> Int{
         return characters.count
     }
-    func image(for character: Animation) -> UIImage {
+    func image(for character: String) -> UIImage {
         let imageName = "\(character)000"
         print(imageName)
         guard let image = UIImage(named: imageName) else {fatalError("Image did not load.(Model.image)")}
@@ -42,7 +42,7 @@ class Model {
         var imageArray : [UIImage] = []
         guard let count = cellCounts[character] else {fatalError("Error message of doom: Model.cells")}
         for num in (0...count) {
-            let imageName = "\(character)\(num.stringPadded(to: 3))"
+            let imageName = "\(character.rawValue)\(num.stringPadded(to: 3))"
             imageArray.append(UIImage(named: imageName)!)
             
         }

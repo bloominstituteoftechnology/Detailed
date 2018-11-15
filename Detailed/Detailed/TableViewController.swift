@@ -17,8 +17,14 @@ class TableViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        cell.imageView?.image = Model.shared.image(for: Model.Animation.allCases[indexPath.row])
+        cell.imageView?.image = Model.shared.image(for: Model.Animation.allCases[indexPath.row].rawValue)
         return cell
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let destination = segue.destination as? DetailViewController else { return }
+        destination.character = Model.Animation.allCases[indexPath.row]
     }
 }

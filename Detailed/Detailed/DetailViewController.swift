@@ -12,13 +12,13 @@ class DetailViewController: UIViewController {
         
         super.viewWillAppear(animated)
         
-        character = Model.shared.getCharacter()
+        guard let character = character else {return}
         
-        let cells = Model.shared.cells(for: character ?? Model.shared.characters[0])
+        let cells = Model.shared.cells(for: character)
         
         imageView.animationImages = cells
         imageView.animationRepeatCount = 0
-        imageView.animationDuration = 3
+        imageView.animationDuration = 9
         imageView.startAnimating()
     }
     
