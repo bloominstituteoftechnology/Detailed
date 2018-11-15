@@ -1,0 +1,9 @@
+1. When you click on a table cell and it takes you to another screen with details about whatever was contained in the cells, you have been sent to the detail view controller. The detail view controller contains details about table view cells.
+
+2. A segue lets you connect objects with different view controllers so that you can send the user to another view controller AND so that you can pass information to the view controller that is connected. You use it by control + dragging an object to another view controller. You may use it from any object to any view controller.
+
+3. You could get your detail view controller information via a model. You could also do it through delegation. Segues require a lot less code.
+
+4. Custom cell types must be conditionally cast when using them with table views because you don't want the app to crash if the cell turns out not to be of the specific type you are casting to. You do it using "as?" syntax.
+
+5.You must conditionally cast detail view controller types when using them in segues for the same reason. You don't want the app to crash if the detail view controller type happens to not exist. You do it the same way, by using "as?" syntax.
