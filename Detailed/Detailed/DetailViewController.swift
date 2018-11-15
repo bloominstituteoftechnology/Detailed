@@ -15,10 +15,11 @@ class DetailViewController: UIViewController {
         guard let character = character else {return}
         
         let cells = Model.shared.cells(for: character)
+        label.text = character.rawValue
         
         imageView.animationImages = cells
         imageView.animationRepeatCount = 0
-        imageView.animationDuration = 9
+        imageView.animationDuration = TimeInterval(Model.shared.count()/2)
         imageView.startAnimating()
     }
     

@@ -38,12 +38,15 @@ class Model {
         return image
     }
     
+    
     func cells(for character: Animation) -> [UIImage] {
+        //coalImage is short for Coalesce Image. To get rid of the XCode error telling me I need to coalesce the image being stored into imageArray, I came up with a way to keep the animation fluid AND provide a default.
+        let coalImage = UIImage(named: "\(character.rawValue)000")
         var imageArray : [UIImage] = []
         guard let count = cellCounts[character] else {fatalError("Error message of doom: Model.cells")}
         for num in (0...count) {
             let imageName = "\(character.rawValue)\(num.stringPadded(to: 3))"
-            imageArray.append(UIImage(named: imageName)!)
+            imageArray.append((UIImage(named: imageName) ?? coalImage!))
             
         }
         
