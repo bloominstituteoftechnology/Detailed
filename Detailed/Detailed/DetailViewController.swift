@@ -1,8 +1,9 @@
 import Foundation
 import UIKit
 
+
 class DetailViewController: UIViewController {
-    var character: Model.Animation?
+    var character: Model.Animation? //= Model.Animation.bureaucrat
     
     @IBOutlet weak var detailBeastNameLabel: UILabel!
     @IBOutlet weak var detailBeastImageView: UIImageView!
@@ -10,10 +11,10 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        guard let character = character else {return}
-        detailBeastNameLabel.text = Model.Animation.bot.rawValue  // fix this later!!!
-        detailBeastImageView.image = Model.shared.image(for: character)
-
+        
+        guard let character = character else {fatalError("valid character not found")}
+        detailBeastNameLabel.text = character.rawValue  // fix this later!!!
+        
         let cells = Model.shared.cells(for: character)
         
         detailBeastImageView.animationImages = cells
