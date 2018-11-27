@@ -2,18 +2,17 @@ import UIKit
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var labelText: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewX: UIImageView!
     
-    var character: String? = ""
+    var character: Character?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     
-    
     let cells = Model.shared.cells(for: character)
-    imageView.animationImages = cells
-    imageView.animationRepeatCount = 0
-    imageView.animationDuration = 15
-    imageView.startAnimating()
-}
+    imageViewX.animationImages = cells
+    imageViewX.animationRepeatCount = 0
+    imageViewX.animationDuration = 15
+    imageViewX.startAnimating()
+    }
 }

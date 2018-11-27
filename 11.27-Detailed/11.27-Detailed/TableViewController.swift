@@ -35,7 +35,8 @@ class TableViewController: UITableViewController {
     let reuseIdentifier = "DetailedCell"
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-
+        let detail = Model.shared.characters
+        cell.nameLabel.text
         // Configure the cell...
 
         return cell

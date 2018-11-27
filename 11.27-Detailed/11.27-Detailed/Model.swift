@@ -28,11 +28,11 @@ class Model {
     
     func image(for character: Animation) -> UIImage {
         // RETURN THE 000 IMAGE FOR THE GIVEN CHARACTER HERE
-        return image(for:indexPath)
+        return 
     }
     
     func cells(for character: Animation) -> [UIImage] {
         // RETURN AN ARRAY OF IMAGES FOR THE GIVEN CHARACTER HERE
-        return cells(for:indexPath)
+        return character.
     }
 }
