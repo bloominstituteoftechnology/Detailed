@@ -26,12 +26,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zit-0O-gPZ">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zit-0O-gPZ">
                                             <rect key="frame" x="137" y="9" width="100" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Zit-0O-gPZ" secondAttribute="bottom" constant="10.5" id="Obn-rH-N6Z"/>
+                                        <constraint firstItem="Zit-0O-gPZ" firstAttribute="leading" secondItem="JI9-35-3G6" secondAttribute="leading" constant="137" id="nnv-Lg-pzx"/>
+                                        <constraint firstItem="Zit-0O-gPZ" firstAttribute="top" secondItem="JI9-35-3G6" secondAttribute="top" constant="9" id="t9M-aA-5co"/>
+                                        <constraint firstAttribute="trailing" secondItem="Zit-0O-gPZ" secondAttribute="trailing" constant="138" id="tcw-HM-DW3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Uja-FX-2we" kind="show" id="cot-6g-wyl"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -52,7 +60,29 @@
                     <view key="view" contentMode="scaleToFill" id="Loa-6V-eQY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="6hU-Tw-eTg">
+                                <rect key="frame" x="67" y="145" width="240" height="254"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kah-tl-i45">
+                                        <rect key="frame" x="84.5" y="0.0" width="71" height="36"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="40Z-xG-TlD">
+                                        <rect key="frame" x="0.0" y="126" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dXH-rD-oyc" firstAttribute="trailing" secondItem="6hU-Tw-eTg" secondAttribute="trailing" constant="68" id="AcH-81-YXz"/>
+                            <constraint firstItem="dXH-rD-oyc" firstAttribute="bottom" secondItem="6hU-Tw-eTg" secondAttribute="bottom" constant="268" id="PTx-Fr-3Jh"/>
+                            <constraint firstItem="6hU-Tw-eTg" firstAttribute="leading" secondItem="dXH-rD-oyc" secondAttribute="leading" constant="67" id="gaE-c5-UjV"/>
+                            <constraint firstItem="6hU-Tw-eTg" firstAttribute="top" secondItem="dXH-rD-oyc" secondAttribute="top" constant="81" id="lPL-fx-Uir"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dXH-rD-oyc"/>
                     </view>
                 </viewController>
