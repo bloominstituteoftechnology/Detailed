@@ -6,4 +6,10 @@
 //  Copyright © 2018 Stuart. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class TableViewContoller: UITableViewController {
+    
+    let reuseIdentifier = "TableViewCell"
+    
+}
