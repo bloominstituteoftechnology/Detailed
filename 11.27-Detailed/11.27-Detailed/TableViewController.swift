@@ -32,15 +32,15 @@ class TableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    let reuseIdentifier = "DetailedCell"
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -86,5 +86,15 @@ class TableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 120
+        default:
+            // MARK: - CHECK THIS
+            return 120
+        }
+    }
 
 }
