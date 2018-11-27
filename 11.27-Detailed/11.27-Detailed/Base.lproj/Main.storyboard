@@ -40,6 +40,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imageView" destination="5cq-8J-f7N" id="Sed-im-Azr"/>
                                     <segue destination="8VT-yw-B7Z" kind="show" id="elF-eO-egc"/>
                                 </connections>
                             </tableViewCell>
@@ -55,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="509.60000000000002" y="124.58770614692655"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="cQc-xx-cIy">
             <objects>
-                <viewController id="8VT-yw-B7Z" sceneMemberID="viewController">
+                <viewController id="8VT-yw-B7Z" customClass="DetailViewController" customModule="_1_27_Detailed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Fm-if-Hzy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,6 +92,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6JY-vN-FIu"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="gll-ce-rKV" id="ehA-jF-gt7"/>
+                        <outlet property="labelText" destination="Oe8-bi-W2K" id="EGy-6W-uNH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZA-bn-eMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

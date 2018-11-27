@@ -1,30 +1,19 @@
-//
-//  DetailViewController.swift
-//  11.27-Detailed
-//
-//  Created by Lambda_School_Loaner_18 on 11/27/18.
-//  Copyright © 2018 Lambda_School_Loaner_18. All rights reserved.
-//
-
 import UIKit
 
 class DetailViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    @IBOutlet weak var labelText: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    var character: String? = ""
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    
+    
+    let cells = Model.shared.cells(for: character)
+    imageView.animationImages = cells
+    imageView.animationRepeatCount = 0
+    imageView.animationDuration = 15
+    imageView.startAnimating()
+}
 }
