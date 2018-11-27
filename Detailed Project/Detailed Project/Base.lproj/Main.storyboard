@@ -33,6 +33,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cellImageView" destination="dR4-G5-sre" id="Ecd-m6-VSh"/>
                                     <segue destination="wjr-mL-oRh" kind="show" id="eaN-xu-UBg"/>
                                 </connections>
                             </tableViewCell>
@@ -56,19 +57,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="k35-xO-bnT">
-                                <rect key="frame" x="20" y="84" width="335" height="343"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="k35-xO-bnT">
+                                <rect key="frame" x="20" y="84" width="335" height="480"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqm-YG-8BG">
-                                        <rect key="frame" x="124" y="0.0" width="87" height="55"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqm-YG-8BG">
+                                        <rect key="frame" x="73" y="0.0" width="189" height="230"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Talking Vendor000" translatesAutoresizingMaskIntoConstraints="NO" id="gLi-qB-aPO">
-                                        <rect key="frame" x="73" y="113" width="189" height="230"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gLi-qB-aPO">
+                                        <rect key="frame" x="73" y="250" width="189" height="230"/>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="gLi-qB-aPO" firstAttribute="width" secondItem="fqm-YG-8BG" secondAttribute="width" id="0zD-mN-7rJ"/>
+                                    <constraint firstItem="gLi-qB-aPO" firstAttribute="height" secondItem="fqm-YG-8BG" secondAttribute="height" id="JAD-pa-mdq"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,6 +84,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Pk-Nw-oDi"/>
                     </view>
+                    <connections>
+                        <outlet property="imageLabel" destination="fqm-YG-8BG" id="Kho-kF-Pzp"/>
+                        <outlet property="imageView" destination="gLi-qB-aPO" id="JRO-5m-Gix"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGc-cy-7yp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,7 +110,4 @@
             <point key="canvasLocation" x="-63" y="133"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Talking Vendor000" width="189" height="230"/>
-    </resources>
 </document>
