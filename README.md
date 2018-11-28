@@ -28,7 +28,7 @@ Demonstrate your understanding of today's concepts by answering the following fr
 * What does a segue do? How do you use it and where?
 * What are other ways your detail view controller could get its information? Why use segues?
 * Why must you conditionally cast custom cell types when using them with table views? How do you do this?
-* Why must you conditionally cast detail view controller types when using them with segues? How do you do this?
+* Why must you conditionally cast detail view controller types when using them with segues? How do you do this? as? viewControllerNameHere - Similar purpose it will not give us access to the outlets and actions we need or let us pass data to it. 
 
 ## Project Setup
 
@@ -51,11 +51,19 @@ Follow these IB setup steps:
 
 1. In Main.storyboard, add a navigation controller with an attached table view controller.
 2. Set the table view controller in the storyboard to be of type `TableViewController`.
+<<<<<<< HEAD
+3. Set the prototype cell in the storyboard to be of type `TableViewCell`. Add a reuse identifier for it and add the same name as a property to your TableViewController implementation.
+4. Select the table view and set its row height to 120
+5. Add and center an image view sized 100x100. Do _not_ clip to bounds.
+6. Add a detail view controller and connect it from your prototype cell by adding a segue that performs "Show".
+7. Add a large label and a centered image view to the detail view controller. Again, do not clip to bounds. Lay out the view to allow for the largest (vendor) animation. Otherwise you are free to design this screen as you like.
+=======
 3. Set the prototype cell in the storyboard to be of type `TableViewCell`. Add a reuse identifier for it and add the same identifier as a String property to your TableViewController implementation.
 4. Select the table view and set the row height to 120
 5. Add an image view with Center content mode, sized 100x100. Do _not_ clip to bounds.
 6. Add a detail view controller and connect it from your prototype cell by adding a segue that performs "Show".
 7. Add a large label and an image view (with a centered content mode) to the detail view controller. Again, do not clip to bounds. Lay out the view to allow for the largest (vendor) animation. Otherwise you are free to design this screen as you like.
+>>>>>>> origin/master
 
 ## Connecting Outlets
 
@@ -137,4 +145,8 @@ After finishing your required elements, push your work further. These goals may 
 
 * Add a segmented control and choose the playback frames per second: 10fps, 15fps, 30fps.
 * Add a play/pause button that toggles between animating and stopping the animation (`stopAnimating()`). The button label must switch appropriately between play and pause images.
+<<<<<<< HEAD
 * Add a share button to the detail view controller that allows you to email or otherwise share the poster image used in the table view.
+=======
+* Add a share button to the detail view controller that allows you to email or otherwise share the poster image used in the table view.
+>>>>>>> origin/master

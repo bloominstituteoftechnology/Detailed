@@ -1,0 +1,63 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgray\c0\c0;}
+\paperw6240\paperh12480\margl1440\margr1440\vieww13140\viewh10460\viewkind0
+\deftab692
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf2 \cb3 * What is a detail view controller?
+\f1\fs24 \
+\
+
+\f0\fs34 Answer: It is a view controller that lets us see details of a cell or view from a table view controller or other controller. \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf2 * What does a segue do? How do you use it and where?\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf2 Answer: It is used to pass data to our detail view controller in MVC design pattern and navigate between views. \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf2 * What are other ways your detail view controller could get its information? Why use segues?\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf2 Answer: segues allows us to keep the model and all our view controllers separate only relying on the view controller from whence it gets its data. \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf2 * Why must you conditionally cast custom cell types when using them with table views? How do you do this?\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf2 Answer: as? tableViewCellNameHere - It is needed because otherwise it will only return a default table view cell which will not give us access to the outlets and actions we need or let us pass data to it. \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf2 * Why must you conditionally cast detail view controller types when using them with segues? How do you do this? \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs34 \cf2 Answer: as? viewControllerNameHere - Similar purpose it will not give us access to the outlets and actions we need or let us pass data to it. 
+\f1\fs24 \
+}
