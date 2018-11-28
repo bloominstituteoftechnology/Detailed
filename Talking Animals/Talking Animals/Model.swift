@@ -35,10 +35,24 @@ class Model {
     }
     
     func image(for character: Animation) -> UIImage {
-        // RETURN THE 000 IMAGE FOR THE GIVEN CHARACTER HERE
+        let characterName: String = "\(character.rawValue)000"
+        return UIImage(named: characterName) ?? UIImage()
     }
     
     func cells(for character: Animation) -> [UIImage] {
-        // RETURN AN ARRAY OF IMAGES FOR THE GIVEN CHARACTER HERE
+        var imageArray: [UIImage] = []
+        
+        guard let charIndex = cellCounts.index(forKey: character) else { return [] }
+        let maxFrameInt = cellCounts.values[charIndex]
+        
+        for i in 1..<maxFrameInt {
+            let animalName = character.rawValue
+            let paddedInt = i.stringPadded(to: 3)
+            let imageName = animalName + paddedInt
+            let image = UIImage(named: imageName) ?? UIImage()
+            imageArray.append(image)
+        }
+        
+        return imageArray
     }
 }
