@@ -36,6 +36,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="spriteImageView" destination="rHR-GN-bgj" id="hVJ-nN-8PP"/>
                                     <segue destination="5Bf-n0-mMi" kind="show" id="CNS-8r-hrc"/>
                                 </connections>
                             </tableViewCell>
@@ -51,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="-36" y="-196"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="7JM-Zd-E1Q">
             <objects>
-                <viewController id="5Bf-n0-mMi" sceneMemberID="viewController">
+                <viewController id="5Bf-n0-mMi" customClass="DetailViewController" customModule="Detailed_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="15X-Ik-TnM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,6 +86,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y4R-TD-k7G"/>
                     </view>
+                    <connections>
+                        <outlet property="expandedSpriteImageView" destination="VpA-Im-HH8" id="wAT-09-Cmm"/>
+                        <outlet property="spriteName" destination="8Xs-r9-rAL" id="KZ5-ri-dfx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ano-9t-TKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
