@@ -14,15 +14,15 @@
         <scene sceneID="3op-Wd-zQo">
             <objects>
                 <tableViewController id="gbr-oV-HVT" customClass="TableViewContoller" customModule="Talking_Animals" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CBZ-WF-Xgy">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CBZ-WF-Xgy" customClass="TableView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="Abk-1o-uIo">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="Abk-1o-uIo" customClass="TableViewCell" customModule="Talking_Animals" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Abk-1o-uIo" id="ahz-88-L23">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Abk-1o-uIo" id="ahz-88-L23" customClass="TableViewCell" customModule="Talking_Animals" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -33,6 +33,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="talkingImageSmall" destination="wEM-3x-cnI" id="HBx-2g-bYl"/>
                                     <segue destination="a6Q-xv-1KB" kind="show" id="uAr-VM-qAY"/>
                                 </connections>
                             </tableViewCell>
@@ -48,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="-279" y="-284"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="m0u-LX-EfD">
             <objects>
-                <viewController id="a6Q-xv-1KB" sceneMemberID="viewController">
+                <viewController id="a6Q-xv-1KB" customClass="DetailViewController" customModule="Talking_Animals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q8N-1D-vyV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,6 +79,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yuy-x7-1a4"/>
                     </view>
+                    <connections>
+                        <outlet property="nameOfImage" destination="Gbc-Nb-Avq" id="UOo-EC-nFM"/>
+                        <outlet property="talkingImage" destination="UVC-eW-rwG" id="TUS-wq-lVi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSo-TB-cQQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

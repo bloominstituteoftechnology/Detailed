@@ -14,6 +14,7 @@
 		17D1342021ADFE1000CAC39A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D1341F21ADFE1000CAC39A /* TableViewController.swift */; };
 		17D1342221ADFE2100CAC39A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D1342121ADFE2100CAC39A /* TableViewCell.swift */; };
 		17D1342421ADFF0300CAC39A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D1342321ADFF0300CAC39A /* Model.swift */; };
+		17D1342621AE088F00CAC39A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D1342521AE088F00CAC39A /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		17D1341F21ADFE1000CAC39A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		17D1342121ADFE2100CAC39A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		17D1342321ADFF0300CAC39A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		17D1342521AE088F00CAC39A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				17D1341421ADFD9700CAC39A /* Assets.xcassets */,
 				17D1341F21ADFE1000CAC39A /* TableViewController.swift */,
 				17D1342121ADFE2100CAC39A /* TableViewCell.swift */,
+				17D1342521AE088F00CAC39A /* DetailViewController.swift */,
 				17D1342321ADFF0300CAC39A /* Model.swift */,
 				17D1341621ADFD9700CAC39A /* LaunchScreen.storyboard */,
 				17D1341921ADFD9700CAC39A /* Info.plist */,
@@ -143,6 +146,7 @@
 			files = (
 				17D1342221ADFE2100CAC39A /* TableViewCell.swift in Sources */,
 				17D1340E21ADFD9600CAC39A /* AppDelegate.swift in Sources */,
+				17D1342621AE088F00CAC39A /* DetailViewController.swift in Sources */,
 				17D1342021ADFE1000CAC39A /* TableViewController.swift in Sources */,
 				17D1342421ADFF0300CAC39A /* Model.swift in Sources */,
 			);
