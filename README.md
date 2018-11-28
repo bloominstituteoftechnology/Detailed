@@ -51,11 +51,11 @@ Follow these IB setup steps:
 
 1. In Main.storyboard, add a navigation controller with an attached table view controller.
 2. Set the table view controller in the storyboard to be of type `TableViewController`.
-3. Set the prototype cell in the storyboard to be of type `TableViewCell`. Add a reuse identifier for it and add the same identifier as a String property to your TableViewController implementation.
-4. Select the table view and set the row height to 120
-5. Add an image view with Center content mode, sized 100x100. Do _not_ clip to bounds.
+3. Set the prototype cell in the storyboard to be of type `TableViewCell`. Add a reuse identifier for it and add the same name as a property to your TableViewController implementation.
+4. Select the table view and set its row height to 120
+5. Add and center an image view sized 100x100. Do _not_ clip to bounds.
 6. Add a detail view controller and connect it from your prototype cell by adding a segue that performs "Show".
-7. Add a large label and an image view (with a centered content mode) to the detail view controller. Again, do not clip to bounds. Lay out the view to allow for the largest (vendor) animation. Otherwise you are free to design this screen as you like.
+7. Add a large label and a centered image view to the detail view controller. Again, do not clip to bounds. Lay out the view to allow for the largest (vendor) animation. Otherwise you are free to design this screen as you like.
 
 ## Connecting Outlets
 
