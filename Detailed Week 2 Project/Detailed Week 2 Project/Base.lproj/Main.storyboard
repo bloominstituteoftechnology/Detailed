@@ -38,6 +38,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="animationImage" destination="Zit-0O-gPZ" id="CH4-tW-Y74"/>
                                     <segue destination="Uja-FX-2we" kind="show" id="cot-6g-wyl"/>
                                 </connections>
                             </tableViewCell>
@@ -85,6 +86,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dXH-rD-oyc"/>
                     </view>
+                    <connections>
+                        <outlet property="imageLabel" destination="kah-tl-i45" id="RZv-5q-AQS"/>
+                        <outlet property="largeAnimation" destination="40Z-xG-TlD" id="dOF-36-D7N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ub7-mo-K51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
