@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+class DetailViewController: UIViewController {
+    
+    @IBOutlet weak var name: UILabel!
+    
+    @IBOutlet weak var image: UIImageView!
+    
+}
