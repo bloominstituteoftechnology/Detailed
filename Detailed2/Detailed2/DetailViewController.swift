@@ -11,7 +11,7 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        // This updates our character in the model
         guard let character = character else { return }
         
         let cells = Model.shared.cells(for: character)
