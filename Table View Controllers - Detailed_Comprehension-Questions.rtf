@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 TABLE VIEW CONTROLLER: Detailed
+\fs24 \
+
+\fs26 [ Comprehension Questions ]\
+\
+
+\fs24 What is a detail view controller?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qr\partightenfactor0
+
+\b0 \cf0 >> A detail view controller allows you to see more details about whatever you\'92ve selected in a table. You can click on cells in a table and it will take you to a new view that includes more information or allows you to perform particular actions, like editing. 
+\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+What does a segue do? How do you use it and where?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qr\partightenfactor0
+
+\b0 \cf0 >> A segue allows for a transition between two view controllers in your storyboard. The segue begins at the view that has an action done to it, like a button or tapping on a table row. The end point of the segue is which view controller you want to display. You use it by control-clicking on the starting point and dragging it to the target view controller. When you release the click, select the transition you want (we have been using \'93Show\'94). 
+\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+What are other ways your detail view controller could get its information? Why use segues?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qr\partightenfactor0
+
+\b0 \cf0 >> The detail view controller could get information by the developer manually entering in information that should be displayed on the next view controller, but this is dangerous because it allows us to pass forward information  while giving enough time to load the information. If you edit another view controller\'92s fields directly, it won\'92t have enough time and will crash. Sending information is much safer than editing views.
+\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Why must you conditionally cast custom cell types when using them with table views? How do you do this?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qr\partightenfactor0
+
+\b0 \cf0 >> We need to use conditional casting with table views when we are specializing the cell because we are downcasting to the subclass type in order to access all the properties inside that subclass type. We do this by using the conditional form of the type cast operator (as?) so that if the downcast isn\'92t possible, it will return nil. 
+\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Why must you conditionally cast detail view controller types when using them with segues? How do you do this?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qr\partightenfactor0
+
+\b0 \cf0 >> We need to use conditional casting when using detail view controller types with segues because we need to make sure that the destination of the segue is actually the DetailViewController. We do this with  << let destination = segue.destination as? DetailViewController else \{ return \} >> }
