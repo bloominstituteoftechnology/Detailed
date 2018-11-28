@@ -50,6 +50,7 @@ class Model {
             imageArray.append(image)
         }
         
+        print(imageArray)
         return imageArray
     }
     
