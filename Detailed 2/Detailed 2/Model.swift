@@ -1,7 +1,5 @@
 import Foundation
 
-import Foundation
-
 class Model {
     
     static let shared = Model()
