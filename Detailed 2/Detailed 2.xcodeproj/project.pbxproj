@@ -60,14 +60,14 @@
 		F8ABBB3B21AE07B80076700E /* Detailed 2 */ = {
 			isa = PBXGroup;
 			children = (
-				F8ABBB3C21AE07B80076700E /* AppDelegate.swift */,
 				F8ABBB4021AE07B80076700E /* Main.storyboard */,
 				F8ABBB5021AE0A8B0076700E /* TableViewController.swift */,
+				F8ABBB5421AE0AA90076700E /* DetailViewController.swift */,
 				F8ABBB5621AE0C370076700E /* CharacterAssetModel.swift */,
 				F8ABBB5221AE0A9C0076700E /* TableViewCell.swift */,
-				F8ABBB5421AE0AA90076700E /* DetailViewController.swift */,
 				F8ABBB4521AE07B90076700E /* LaunchScreen.storyboard */,
 				F8ABBB4821AE07B90076700E /* Info.plist */,
+				F8ABBB3C21AE07B80076700E /* AppDelegate.swift */,
 				F8ABBB4321AE07B90076700E /* Assets.xcassets */,
 			);
 			path = "Detailed 2";

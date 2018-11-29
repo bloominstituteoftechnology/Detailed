@@ -47,10 +47,11 @@ class CharacterAssetModel {
         // tripleZeroes taps into the Int type extension to produce "000", by passing in a count of 3
         let tripleZeroes = 0.stringPadded(to: 3)
         // I don't know who is going to pass in the character name, but the raw value will be extracted
-        // and then the tripleZeroes will be appended to it, resulting in "Talking Character000"
+        // and then the tripleZeroes will be "appended" to it, resulting in "Talking Character000"
         let imageName = "\(character.rawValue)\(tripleZeroes)"
         
         // Letting an image be set to a physical image with the image name above.
+        // Not sure why we have UIImage in the return, as returning a fatal error would make more sense.
         guard let characterStillImage = UIImage(named: imageName) else { return UIImage() }
         
         // Then we return only that image.
@@ -61,12 +62,37 @@ class CharacterAssetModel {
     func characterAnimation(for character: Animation) -> [UIImage] {
         // RETURN AN ARRAY OF IMAGES FOR THE GIVEN CHARACTER HERE
         
+        /* String padding attempt 1
+        var amountOfZeroes = 0
+        let zeroes = 0.stringPadded(to: amountOfZeroes)
+        // print(zeroes)
+        */
+        
+        let doubleZeroes = 0.stringPadded(to: 2)
+        let singleZero = 0.stringPadded(to: 1)
         
         var characterImageArray: [UIImage] = []
         
+        guard let currentCharacter = characterImageStillCounts[character] else { fatalError("reference to character does not exist")}
+        
+        var characterImageName = ""
+        
+        for still in 0 ..< currentCharacter {
+            if still < 10 {
+                // amountOfZeroes = 2
+                characterImageName = "\(character.rawValue)\(doubleZeroes)\(still)"
+            } else {
+                // amountOfZeroes = 1
+                characterImageName = "\(character.rawValue)\(singleZero)\(still)"
+            }
+            guard let talkingCharacterImage = UIImage(named: characterImageName) else { fatalError("Can't name UIImage")}
+            characterImageArray.append(talkingCharacterImage)
+        }
+        
+        /* Code Iyin gave us
         guard let index = characterImageStillCounts.index(forKey: character) else { return [] }
-
         let max = characterImageStillCounts.values[index]
+        */
 
         return characterImageArray
     }

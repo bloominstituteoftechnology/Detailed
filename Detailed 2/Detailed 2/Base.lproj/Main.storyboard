@@ -26,8 +26,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rHR-GN-bgj">
-                                            <rect key="frame" x="137" y="9" width="100" height="100"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rHR-GN-bgj">
+                                            <rect key="frame" x="137.5" y="10" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="kAK-mt-yPp"/>
+                                                <constraint firstAttribute="width" constant="100" id="ozX-im-HhS"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -82,12 +86,11 @@
                             <constraint firstItem="RVf-Fy-EBL" firstAttribute="top" secondItem="Y4R-TD-k7G" secondAttribute="top" constant="8" id="Vsf-Ml-31s"/>
                             <constraint firstItem="RVf-Fy-EBL" firstAttribute="leading" secondItem="Y4R-TD-k7G" secondAttribute="leading" constant="8" id="i80-C5-OTj"/>
                             <constraint firstItem="Y4R-TD-k7G" firstAttribute="trailing" secondItem="RVf-Fy-EBL" secondAttribute="trailing" constant="8" id="m82-4a-Hog"/>
-                            <constraint firstItem="RVf-Fy-EBL" firstAttribute="centerY" secondItem="15X-Ik-TnM" secondAttribute="centerY" id="nDc-KO-SDT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y4R-TD-k7G"/>
                     </view>
                     <connections>
-                        <outlet property="expandedSpriteImageView" destination="VpA-Im-HH8" id="wAT-09-Cmm"/>
+                        <outlet property="animatedSpriteImageView" destination="VpA-Im-HH8" id="vI8-jm-2fk"/>
                         <outlet property="spriteName" destination="8Xs-r9-rAL" id="KZ5-ri-dfx"/>
                     </connections>
                 </viewController>
