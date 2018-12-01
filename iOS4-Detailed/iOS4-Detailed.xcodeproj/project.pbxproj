@@ -64,10 +64,10 @@
 				2772B9A921ADF99600E20001 /* AppDelegate.swift */,
 				2772B9B521ADF99800E20001 /* Info.plist */,
 				2772B9B021ADF99800E20001 /* Assets.xcassets */,
-				2772B9BB21ADFF0900E20001 /* TableViewController.swift */,
-				2772B9BD21AE042100E20001 /* TableViewCell.swift */,
-				2772B9BF21AE043600E20001 /* DetailViewController.swift */,
 				2772B9C121AE044F00E20001 /* Model.swift */,
+				2772B9BD21AE042100E20001 /* TableViewCell.swift */,
+				2772B9BB21ADFF0900E20001 /* TableViewController.swift */,
+				2772B9BF21AE043600E20001 /* DetailViewController.swift */,
 				2772B9AD21ADF99600E20001 /* Main.storyboard */,
 			);
 			path = "iOS4-Detailed";
