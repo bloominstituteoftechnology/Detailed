@@ -4,9 +4,11 @@ import UIKit
 // Allows integers to be converted into strings with a certain amount of zeroes,
 // based on the number that is passed in.
 // e.g. - let tripleZeroes = 0.stringPadded(to: 3) returns "000"
+// this is smart, it will only apply the amount of zeroes necessary befor the image.
 extension Int {
     fileprivate func stringPadded(to count: Int) -> String {
         var string = String(self)
+        // sets itself as a string
         while string.count < count { string = "0" + string }
         return string
     }
@@ -68,23 +70,26 @@ class CharacterAssetModel {
         // print(zeroes)
         */
         
-        let doubleZeroes = 0.stringPadded(to: 2)
-        let singleZero = 0.stringPadded(to: 1)
+//        let doubleZeroes = 0.stringPadded(to: 2)
+//        let singleZero = 0.stringPadded(to: 1)
+        
+        // This is redundant and should be defined earlier, elsewhere.
+        let tripleZeroes = 0.stringPadded(to: 3)
         
         var characterImageArray: [UIImage] = []
         
         guard let currentCharacter = characterImageStillCounts[character] else { fatalError("reference to character does not exist")}
         
         var characterImageName = ""
-        
+        // Check note in Ulysses for better code.
         for still in 0 ..< currentCharacter {
-            if still < 10 {
+//            if still < 10 {
                 // amountOfZeroes = 2
-                characterImageName = "\(character.rawValue)\(doubleZeroes)\(still)"
-            } else {
-                // amountOfZeroes = 1
-                characterImageName = "\(character.rawValue)\(singleZero)\(still)"
-            }
+            characterImageName = "\(character.rawValue)\(tripleZeroes)\(still)"
+//            } else {
+//                // amountOfZeroes = 1
+//                characterImageName = "\(character.rawValue)\(tripleZeroes)\(still)"
+//            }
             guard let talkingCharacterImage = UIImage(named: characterImageName) else { fatalError("Can't name UIImage")}
             characterImageArray.append(talkingCharacterImage)
         }
