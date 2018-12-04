@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="fD2-M6-3MM">
             <objects>
                 <tableViewController id="uDQ-4T-goA" customClass="TableViewController" customModule="Detailed" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,6 +40,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="characterImage" destination="kOA-VI-IFy" id="dDj-jC-mfs"/>
+                                    <segue destination="84l-6R-P0V" kind="show" id="9ax-IV-nC7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,7 +49,7 @@
                             <outlet property="delegate" destination="uDQ-4T-goA" id="ttO-nF-zlU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="FaB-Sg-a81"/>
+                    <navigationItem key="navigationItem" id="FaB-Sg-a81"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTT-sa-6da" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
