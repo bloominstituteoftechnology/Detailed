@@ -14,12 +14,21 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
-    var character: Model.Animation?
+    var character : Model.Animation?
     
-    let cells = Model.shared.cells(for: character)
-    imageView.animationImages = cells
-    imageView.animationRepeatCount = 0
-    imageView.animationDuration = // FIGURE THIS PART OUT
-    imageView.startAnimating()
-    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        guard let character = character else {return}
+        
+        let cells = Model.shared.cells(for: character)
+        nameLabel.text = character.rawValue
+        
+        
+        characterView.animationImages = cells
+        characterView.animationRepeatCount = 0
+        characterView.animationDuration = TimeInterval(0.0/2)
+        characterView.startAnimating()
+    }
 }
