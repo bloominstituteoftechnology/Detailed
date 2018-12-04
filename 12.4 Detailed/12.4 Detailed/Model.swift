@@ -33,4 +33,8 @@ class Model {
     func cells(for character: Animation) -> [UIImage] {
         // RETURN AN ARRAY OF IMAGES FOR THE GIVEN CHARACTER HERE
     }
+    
+    func countAnimation() -> Int {
+       return characters.count
+    }
 }

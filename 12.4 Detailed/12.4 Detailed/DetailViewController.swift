@@ -7,6 +7,18 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+//    let charecter =
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let cells = Model.shared.cells(for: character)
+        imageView.animationImages = cells
+        imageView.animationRepeatCount = 0
+        imageView.animationDuration = // FIGURE THIS PART OUT
+            imageView.startAnimating()
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
