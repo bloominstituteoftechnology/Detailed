@@ -10,7 +10,5 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    static let reuseIdentifier = "charactercell"
-
     @IBOutlet weak var characterView: UIImageView!
 }
