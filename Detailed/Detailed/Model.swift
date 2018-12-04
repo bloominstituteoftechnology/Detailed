@@ -12,6 +12,8 @@ class Model {
     static let shared = Model()
     private init() {}
     
+    var index: Int = 0
+    
     enum Animation: String, CaseIterable {
         case bureaucrat = "Talking Bureaucrat"
         case frog = "Talking Frog"
@@ -24,6 +26,10 @@ class Model {
     
     var characters: [Animation] {
         return Animation.allCases
+    }
+    
+    func count() -> Int{
+        return characters.count
     }
     
     // TODO: Implement
@@ -45,6 +51,10 @@ class Model {
             imageArray.append((UIImage(named: imageName) ?? coalesceImage!))
         }
         return imageArray
+    }
+    func getCharacter () -> Model.Animation{
+        let character = Model.shared.characters[Model.shared.index]
+        return character
     }
 
 }
