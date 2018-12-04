@@ -35,7 +35,7 @@ class Model {
     // TODO: Implement
     func image(for character: Animation) -> UIImage {
         // RETURN THE 000 IMAGE FOR THE GIVEN CHARACTER HERE
-        let imageName = "\(character)000"
+        let imageName = "\(character.rawValue)000"
         print(imageName)
         guard let image = UIImage(named: imageName) else {fatalError("Image did not load.(Model.image)")}
         return image
