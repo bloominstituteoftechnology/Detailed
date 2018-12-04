@@ -12,7 +12,7 @@ class TableViewController: UITableViewController {
     //What do we have to do?
     //Specify the number of sections
     override func numberOfSections(in tableView: UITableView) -> Int {
-       return 0
+       return 1
     }
     
     //Define the number of cells in the section
@@ -26,8 +26,9 @@ class TableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseIdentifier, for: indexPath) as? TableViewCell
             else { fatalError("Unable to dequeue tableview cell of type TableViewCell")}
         
-        //
-        
+        //Get the 000 character image to be displayed in this row
+        let character = Model.shared.characters[indexPath.row]
+        cell.characterImage.image = Model.shared.image(for: character)
         return cell
     }
     
