@@ -33,10 +33,12 @@ class Model {
         return Animation.allCases
     }
     
-//    func image(for character: Animation) -> UIImage {
-//        // RETURN THE 000 IMAGE FOR THE GIVEN CHARACTER HERE
-//        return nil
-//    }
+    func image(for character: Animation) -> UIImage {
+        // RETURN THE 000 IMAGE FOR THE GIVEN CHARACTER HERE
+        let characterName = "\(character.rawValue)000"
+        let characterImage = UIImage(named: characterName)!
+        return characterImage
+    }
 //
 //    func cells(for character: Animation) -> [UIImage] {
 //        // RETURN AN ARRAY OF IMAGES FOR THE GIVEN CHARACTER HERE

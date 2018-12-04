@@ -9,4 +9,28 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    //What do we have to do?
+    //Specify the number of sections
+    override func numberOfSections(in tableView: UITableView) -> Int {
+       return 0
+    }
+    
+    //Define the number of cells in the section
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Model.shared.characters.count
+    }
+    
+    //Dequeue the cells and populate the imageview
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //Dequeue the cells. Cast as a TableViewCell type
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseIdentifier, for: indexPath) as? TableViewCell
+            else { fatalError("Unable to dequeue tableview cell of type TableViewCell")}
+        
+        //
+        
+        return cell
+    }
+    
+    
+    
 }
