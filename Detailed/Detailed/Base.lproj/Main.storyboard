@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,6 +38,9 @@
                                         <constraint firstItem="kOA-VI-IFy" firstAttribute="centerX" secondItem="8Ma-S6-ntb" secondAttribute="centerX" id="aif-rz-7IN"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="characterImage" destination="kOA-VI-IFy" id="dDj-jC-mfs"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -49,6 +53,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTT-sa-6da" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="398" y="116"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="OIq-hk-BLE">
+            <objects>
+                <viewController id="84l-6R-P0V" customClass="DetailViewController" customModule="Detailed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YnQ-7g-Cfj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="6Hp-Tq-spF">
+                                <rect key="frame" x="122" y="210" width="130" height="246"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTR-To-LJs">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="36"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ymH-IN-Dmw">
+                                        <rect key="frame" x="0.0" y="57" width="130" height="189"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FTR-To-LJs" firstAttribute="leading" secondItem="6Hp-Tq-spF" secondAttribute="leading" id="5fI-SI-97j"/>
+                                    <constraint firstAttribute="trailing" secondItem="ymH-IN-Dmw" secondAttribute="trailing" id="8z8-Ld-ncq"/>
+                                    <constraint firstItem="FTR-To-LJs" firstAttribute="top" secondItem="6Hp-Tq-spF" secondAttribute="top" id="ERz-ci-bmf"/>
+                                    <constraint firstAttribute="bottom" secondItem="ymH-IN-Dmw" secondAttribute="bottom" id="aHa-8f-32s"/>
+                                    <constraint firstItem="ymH-IN-Dmw" firstAttribute="leading" secondItem="6Hp-Tq-spF" secondAttribute="leading" id="fui-Si-WZY"/>
+                                    <constraint firstAttribute="trailing" secondItem="FTR-To-LJs" secondAttribute="trailing" id="pRQ-a8-iaM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="opk-ga-hPn"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailImage" destination="ymH-IN-Dmw" id="0cW-AC-9Ti"/>
+                        <outlet property="detailLabel" destination="FTR-To-LJs" id="bOu-MC-ISY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ti-kw-u9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fOk-Qv-2Tb">
