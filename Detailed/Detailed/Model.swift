@@ -39,9 +39,24 @@ class Model {
         let characterImage = UIImage(named: characterName)!
         return characterImage
     }
-//
-//    func cells(for character: Animation) -> [UIImage] {
-//        // RETURN AN ARRAY OF IMAGES FOR THE GIVEN CHARACTER HERE
-//        return []
-//    }
+
+    func cells(for character: Animation) -> [UIImage] {
+        // RETURN AN ARRAY OF IMAGES FOR THE GIVEN CHARACTER HERE
+        //Create the array that will hold the images to create the animation
+        var imagesArray: [UIImage] = []
+        
+        //Get the number of images that animate the character
+        guard let imageCount = cellCounts[character] else { return [] }
+        
+        //Populate the imagesArray with the character images
+        for image in 0 ..< imageCount {
+            //Get the name of the image
+            let name = "\(character.rawValue)\(image.stringPadded(to: 3))"
+            //Identify the next image to animate the character
+            let nextImage = UIImage(named: name)!
+            //Append the image to the array of images
+            imagesArray.append(nextImage)
+        }
+        return imagesArray
+    }
 }
