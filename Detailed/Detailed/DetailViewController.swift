@@ -18,6 +18,7 @@ class DetailViewController: UIViewController {
     override func viewWillAppear (_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        //Set the character name
         detailLabel.text = Model.shared.characterName(for: theCharacter!)
         
         //Create the animation
@@ -28,6 +29,8 @@ class DetailViewController: UIViewController {
         detailImage.animationRepeatCount = 0
         //Set the speed of the animation
         detailImage.animationDuration = Double(cells.count / 15)
+        //Start the animation
+        
     }
     
     

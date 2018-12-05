@@ -32,6 +32,17 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    //Perform the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let destination = segue.destination as? DetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow
+        else { return }
+        
+        let character = Model.shared.characters[indexPath.row]
+        destination.theCharacter = character
+    }
+    
     
     
 }

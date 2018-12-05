@@ -61,7 +61,8 @@ class Model {
     }
     
     func characterName(for character: Animation) -> String {
-        let characterName: String = character.rawValue
-        return characterName
+        let name: String = character.rawValue
+        print(name)
+        return name
     }
 }

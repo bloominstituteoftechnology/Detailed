@@ -64,30 +64,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="6Hp-Tq-spF">
-                                <rect key="frame" x="122" y="210" width="130" height="246"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="6Hp-Tq-spF">
+                                <rect key="frame" x="61.5" y="176.5" width="252" height="314"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTR-To-LJs">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTR-To-LJs">
+                                        <rect key="frame" x="0.0" y="0.0" width="252" height="50"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ymH-IN-Dmw">
-                                        <rect key="frame" x="0.0" y="57" width="130" height="189"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ymH-IN-Dmw">
+                                        <rect key="frame" x="0.0" y="76" width="252" height="238"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="FTR-To-LJs" firstAttribute="leading" secondItem="6Hp-Tq-spF" secondAttribute="leading" id="5fI-SI-97j"/>
-                                    <constraint firstAttribute="trailing" secondItem="ymH-IN-Dmw" secondAttribute="trailing" id="8z8-Ld-ncq"/>
-                                    <constraint firstItem="FTR-To-LJs" firstAttribute="top" secondItem="6Hp-Tq-spF" secondAttribute="top" id="ERz-ci-bmf"/>
-                                    <constraint firstAttribute="bottom" secondItem="ymH-IN-Dmw" secondAttribute="bottom" id="aHa-8f-32s"/>
-                                    <constraint firstItem="ymH-IN-Dmw" firstAttribute="leading" secondItem="6Hp-Tq-spF" secondAttribute="leading" id="fui-Si-WZY"/>
-                                    <constraint firstAttribute="trailing" secondItem="FTR-To-LJs" secondAttribute="trailing" id="pRQ-a8-iaM"/>
+                                    <constraint firstAttribute="width" secondItem="6Hp-Tq-spF" secondAttribute="height" multiplier="126:157" id="hlm-gZ-puz"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Hp-Tq-spF" firstAttribute="centerY" secondItem="YnQ-7g-Cfj" secondAttribute="centerY" id="L08-aS-KKL"/>
+                            <constraint firstItem="6Hp-Tq-spF" firstAttribute="centerX" secondItem="YnQ-7g-Cfj" secondAttribute="centerX" id="NxO-pU-BZU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="opk-ga-hPn"/>
                     </view>
                     <connections>
