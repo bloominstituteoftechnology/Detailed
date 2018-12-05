@@ -4,9 +4,9 @@ class TableViewController: UITableViewController {
     
     let reuseIdentifier = "tableCell"
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -19,25 +19,25 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Model.shared.characters.count
+        return Model.shared.countAnimation()
+        // .cellCount
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        let animation = Model.shared.
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! TableViewCell
+        // let detail = Model.shared.characters
+          let animation = Model.shared.characters[indexPath.row]
         
+        cell.mainImage?.image = Model.shared.image(for: animation)
 
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        guard let destinationVC = segue.destination as? DetailViewController,
-        let indexPath = tableView.indexPathForSelectedRow else { return }
-        let toon = Model.shared.characters
-        
-        destinationVC.toon = charecter
+        guard let destination = segue.destination as? DetailViewController else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let character = Model.shared.characters[indexPath.row]
+        destination.charecter = character
     }
 }

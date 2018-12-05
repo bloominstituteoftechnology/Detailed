@@ -40,7 +40,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageView" destination="WQS-Ph-oPw" id="2r2-oY-UM2"/>
+                                    <outlet property="mainImage" destination="WQS-Ph-oPw" id="2r2-oY-UM2"/>
                                     <segue destination="ZWI-8L-k04" kind="show" id="puk-wV-cyf"/>
                                 </connections>
                             </tableViewCell>

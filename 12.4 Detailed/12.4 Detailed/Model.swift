@@ -28,10 +28,23 @@ class Model {
     
     func image(for character: Animation) -> UIImage {
         // RETURN THE 000 IMAGE FOR THE GIVEN CHARACTER HERE
+        let val = "\(character.rawValue)000"
+        let image = UIImage(named: val)!
+        return image
     }
-    
+
     func cells(for character: Animation) -> [UIImage] {
         // RETURN AN ARRAY OF IMAGES FOR THE GIVEN CHARACTER HERE
+        var array: [UIImage] = []
+        guard let numImages = cellCounts[character] else { return [] }
+        
+        for index in 0..<numImages {
+            let name = "\(character.rawValue)\(index.stringPadded(to: 3))"
+            let animatedImage = UIImage(named: name)!
+            array.append(animatedImage)
+        }
+        return array
+    
     }
     
     func countAnimation() -> Int {
