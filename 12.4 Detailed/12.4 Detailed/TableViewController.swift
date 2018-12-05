@@ -20,14 +20,12 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Model.shared.countAnimation()
-        // .cellCount
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! TableViewCell
-        // let detail = Model.shared.characters
-          let animation = Model.shared.characters[indexPath.row]
+        let animation = Model.shared.characters[indexPath.row]
         
         cell.mainImage?.image = Model.shared.image(for: animation)
 
