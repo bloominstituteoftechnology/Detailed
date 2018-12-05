@@ -7,6 +7,4 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var tableImageView: UIImageView!
     
 
-
-
 }

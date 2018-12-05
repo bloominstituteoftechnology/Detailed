@@ -11,28 +11,25 @@ import UIKit
 class DetailViewController: UIViewController {
     
     
-    @IBOutlet weak var nameLable: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageDetailView: UIImageView!
     
+    var character: Model.Animation?
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let character = character else { return }
+        nameLabel.text = character.rawValue
+        
+        let cells = Model.shared.cells(for: character)
+        imageDetailView.animationImages = cells
+        imageDetailView.animationRepeatCount = 0
+        imageDetailView.animationDuration = Double(cells.count / 15)
+        imageDetailView.startAnimating()
     
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
 }

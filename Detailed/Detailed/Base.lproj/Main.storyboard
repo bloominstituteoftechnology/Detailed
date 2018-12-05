@@ -81,7 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="imageDetailView" destination="KKH-sk-QKA" id="YnA-hV-Pcj"/>
-                        <outlet property="nameLable" destination="qbU-dq-wv3" id="VSj-yz-Lft"/>
+                        <outlet property="nameLabel" destination="qbU-dq-wv3" id="VSj-yz-Lft"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LY9-bx-qB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
