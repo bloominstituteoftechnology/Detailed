@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="Yx2-6a-HlA">
             <objects>
                 <tableViewController id="WlK-qt-CJx" customClass="TableViewController" customModule="_2_4_Detailed" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                             <outlet property="delegate" destination="WlK-qt-CJx" id="Yz4-Vd-QrU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="6h2-9a-0G6"/>
+                    <navigationItem key="navigationItem" id="6h2-9a-0G6"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFy-bp-KBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,16 +65,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="QZu-ba-Ern">
-                                <rect key="frame" x="0.0" y="64" width="300" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvO-ku-bVB">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="253"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="253"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yO4-EF-LnT">
-                                        <rect key="frame" x="0.0" y="303" width="300" height="300"/>
+                                        <rect key="frame" x="75" y="303" width="300" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="cgc-19-6eW"/>
                                             <constraint firstAttribute="height" constant="300" id="uYi-te-AUF"/>
