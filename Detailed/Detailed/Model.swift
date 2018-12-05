@@ -59,4 +59,9 @@ class Model {
         }
         return imagesArray
     }
+    
+    func characterName(for character: Animation) -> String {
+        let characterName: String = character.rawValue
+        return characterName
+    }
 }
