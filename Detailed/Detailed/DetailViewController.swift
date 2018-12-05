@@ -30,7 +30,7 @@ class DetailViewController: UIViewController {
         //Set the speed of the animation
         detailImage.animationDuration = Double(cells.count / 15)
         //Start the animation
-        
+        detailImage.startAnimating()
     }
     
     
